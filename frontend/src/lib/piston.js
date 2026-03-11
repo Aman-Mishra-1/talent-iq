@@ -1,6 +1,6 @@
 // Piston API is a service for code execution
 
-const PISTON_API = "https://piston.vercel.app/api/v2";
+const PISTON_API = "https://emkc.org/api/v2/piston";
 
 const LANGUAGE_VERSIONS = {
   javascript: { language: "javascript", version: "18.15.0" },
@@ -26,7 +26,6 @@ export async function executeCode(language, code) {
 
     const response = await fetch(`${PISTON_API}/execute`, {
       method: "POST",
-      mode: "cors",
       headers: {
         "Content-Type": "application/json",
       },
